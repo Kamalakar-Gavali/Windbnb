@@ -25,12 +25,18 @@ width:100%;
 height:55%;
 padding:20px 97px;//70 97
 box-sizing:border-box;
+display:flex;
+justify-content:center;
 
 @media (max-width:600px)
 {
     padding:20px 10px;
 }
 
+& .wrapper{
+width:100%;
+max-width:2000px;    
+}
 & div.close{
     display: flex;
     justify-content: flex-end;
@@ -283,6 +289,7 @@ const FilterBox=()=>{
             <StyledFilterContainer 
             // onClick={(e)=>{e.preventDefault();context.setShowCities(false);context.setShowGuestBox(false)}}
             >
+                <div className='wrapper'>
                 <div className='close' >
                 <span onClick={()=>context.setShowFilter(false)}><CloseIcon/></span>
                 </div>
@@ -360,6 +367,7 @@ const FilterBox=()=>{
             <span><SearchIcon style={{color:'white',fontSize:'30px'}}/></span>
             <p>Search</p>
             </StyledSearchButtonForMobile>
+            </div>
             </StyledFilterContainer>
             <Overlay onClick={()=>{context.setShowFilter(false);context.setShowCities(false);context.setShowGuestBox(false)}}>
 

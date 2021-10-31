@@ -3,7 +3,7 @@
 <h1 align="center">Windbnb</h1>
 <div align="center">
   <h3>
-    <a href="https://mystifying-lalande-1d6cc8.netlify.app/">
+    <a href="https://windbnb101.netlify.app/">
       Demo
     </a>
   
@@ -16,6 +16,7 @@
 
 - [Overview](#overview)
   - [Built With](#built-with)
+- [Features](#features)
 - [Contact](#contact)
 
 
@@ -23,7 +24,7 @@
 
 ## Overview
 
-![screenshot](./public/inputDemoScreenshot.png)
+![screenshot](./src/resources/Windbnb.png)
 
 <!-- Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -40,6 +41,12 @@
 - [styled-components](https://styled-components.com/)
 - [Rect Contxet](https://reactjs.org/docs/context.html)
 - [Material Icons](https://mui.com/components/material-icons/)
+
+## Features
+
+- Responsive
+- Filtering stays according to cities/No of people
+
 
 ## Contact
 - LinkedIn [Kamalakar Gavali](https://in.linkedin.com/in/kamalakar-gavali)
