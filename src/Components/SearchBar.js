@@ -1,6 +1,9 @@
+import React from 'react';
 import styled from 'styled-components'
 import {Search as SearchIcon} from '@mui/icons-material'
-
+import FilterBox from './FilterBox';
+import { useContext } from 'react';
+import {FilterContext} from'../Components/MainScreen'
 const StyledSearchBar=styled.div`
 display:flex;
 padding:5px;
@@ -11,6 +14,9 @@ color:#BDBDBD;
 & p{
     
     //  border-right:1px solid #F2F2F2;
+    &.active{
+        color:#333333;
+    }
     
 }
 & div{
@@ -20,7 +26,6 @@ margin-top:23px;
 border: 1px solid #F2F2F2;
 transform: rotate(90deg);
 }
-
 & span{
     display: flex;
     align-items: center;
@@ -29,14 +34,20 @@ transform: rotate(90deg);
 
 `;
 const SearchBar=()=>{
-
+const context=useContext(FilterContext);
     return (
-<StyledSearchBar>
-    <p>Search a City </p>
+<StyledSearchBar onClick={()=>{console.log("clicked");context.setShowFilter(true)}}>
+    <p className={context.selectedCity && 'active'} onClick={()=>context.setShowCities(true)}>{context.selectedCity?context.selectedCity+', Finland':'Search a City'}</p>
     <div></div>
-    <p>Add guests</p>
+    <p className={(context.childrenCount+context.adultsCount)>0 && 'active'} onClick={()=>context.setShowGuestBox(true)}>{(context.childrenCount+context.adultsCount)>0?context.childrenCount+context.adultsCount:'Add guests'}</p>
     <div></div>
     <span><SearchIcon style={{color:'#EB5757',fontSize:'30px'}}/></span>
+    
+    {
+        console.log('context Val',context)
+    }
+    
+    {/* <FilterBox/> */}
 </StyledSearchBar>
     )
 }

@@ -9,7 +9,7 @@ line-height: 17px;
 /* identical to box height */
 
 text-align: center;
-margin-top:25px;
+margin-top:55px;
 
 color: #828282;
 `;

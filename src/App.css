@@ -1,6 +1,7 @@
 .App {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  box-sizing: border-box;
 }
 
 .App-logo {
