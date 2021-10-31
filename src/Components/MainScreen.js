@@ -40,7 +40,10 @@ justify-content:space-between;
     margin-top:28px;
 }
 `;
-
+const StyledNoStays=styled.h1`
+width:100%;
+text-align:center;
+`
 
 const MainScreen=()=>{
 
@@ -68,13 +71,14 @@ const MainScreen=()=>{
 <p>Stays in {} Finland</p>
 <p>{staysData.length} stays</p>
     </StaysInfo>
+    
     <CardWrapper>
-    {
+    {staysData.length>0?
         staysData.map((stay)=>
         <Card data={stay}/>
-        )
+        ):
+        <StyledNoStays>No Stays Available</StyledNoStays>
     }
-    
     </CardWrapper>
     <Footer/>
     </Wrapper>

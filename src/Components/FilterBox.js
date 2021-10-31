@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Dialog,DialogTitle } from "@mui/material";
 import {FilterContext} from '../Components/MainScreen'
 import {LocationOn as LocationOnIcon,Search as SearchIcon,Close as CloseIcon } from '@mui/icons-material';
+import stays from '../stays.json'
 let darkGrey='#394753';
 let lightGrey='#394753c7';
 let tomato='tomato';
@@ -196,6 +197,18 @@ width:50% !important;
 // margin-top:10px;
 
 
+p{
+    margin:0px;
+    font-weight:bold;
+    font-size:14px;
+    white-space:nowrap !important;
+    &:nth-of-type(2){
+        color:grey;    
+        font-weight:normal;
+        
+    }
+    }
+
 & div{
 display: flex;
 flex-direction:row !important;
@@ -212,23 +225,14 @@ height: 30px;
     border-radius: 4px;
     cursor:pointer;
 }
+& p{
+  color:#333333 ;//!important;
+  font-weight:600; //!important;
+}
 }
 
-p{
-margin:0px;
-font-weight:bold;
-font-size:14px;
-white-space:nowrap !important;
-&:nth-child(2){
-    color:grey;    
-    font-weight:normal;
-    
-}
-}
-// p:last-child{
 
-    
-// }
+
 }
 
 `;
@@ -273,7 +277,7 @@ const FilterBox=()=>{
 
     const setFilterdata=()=>{
 
-        let filtereddData=context.staysData.filter((stay)=>(context.selectedCity &&(context.adultsCount+context.childrenCount)>0)?context.selectedCity &&stay.maxGuests>=(context.adultsCount+context.childrenCount): context.selectedCity|| stay.maxGuests>=(context.adultsCount+context.childrenCount));
+        let filtereddData=stays.filter((stay)=>(context.selectedCity &&(context.adultsCount+context.childrenCount)>0)?context.selectedCity &&stay.maxGuests>=(context.adultsCount+context.childrenCount): context.selectedCity|| stay.maxGuests>=(context.adultsCount+context.childrenCount));
         context.setShowFilter(false)
         
         console.log('Data',context.staysData)
