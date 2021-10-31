@@ -1,9 +1,2 @@
-CI= npm run build
-npm install netlify-cli -g
-
-
-npm run build
-
-netlify deploy
-./build
-netlify deploy --prod
+[build]
+ CI= npm run build
