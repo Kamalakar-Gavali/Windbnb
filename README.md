@@ -1,9 +1,9 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Button Component</h1>
+<h1 align="center">Windbnb</h1>
 <div align="center">
   <h3>
-    <a href="https://6179adf4d9a2d4003a5963b7-flebdpntdf.chromatic.com/">
+    <a href="https://mystifying-lalande-1d6cc8.netlify.app/">
       Demo
     </a>
   
